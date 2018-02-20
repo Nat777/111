@@ -3,40 +3,59 @@
 <style>
 	#styledText{
     	font-size: 24px;
-        color: red;
+        color:red;
     }
+    #leftP{
+		background-color:DodgerBlue;
+        color:#af8484;
+    }
+    #centerC{
+    	background-color:Tomato;
+        color:#002e0c;
+	}
+    #rightR{
+    	background-color:Violet;
+    	color: red;
+	}
+    
 </style>
 <body>
+
+<p align="left" id="leftP"> Какой синий текст слева </p>
+   
+<p align="center" id="centerC"> А по середине у нас красненький </p>
+    
+<p align="right" id="rightR"> Ну а левый у нас цвета мокрого асфальта  </p>	
 
 <h1>My First Heading</h1>
 
 <p id="styledText">My first paragraph.</p>
 <p id="text">This text will change style</p><br>
-<button type="button" onclick="javascripot:changeStyle();">Click me</button>
+<button type="button" onclick="javascript:changeStyle();">Click me</button>
 
 <script>
 status = 1;
 function changeStyle() {
 //Note the lowercase first letter.
 x = document.getElementById("text");
+y = document.getElementById("leftP");
 
 if(status==1) {
     x.style.color = 'blue';
+    y.style.fontSize='8px';
     status = 2;
 }
 else if(status==2) {
     x.style.color = 'red';
+    y.style.fontSize='12px';
     status = 3;
 }
 else if(status==3) {
     x.style.color = 'yellow';
+    y.style.fontSize='20px';
     status = 1;
    
-<p align=left> Какой синий текст слева </p>
-   
-<p align=center> А по середине у нас красненький </p>
-    
-<p align=right> Ну а левый у нас цвета мокрого асфальта  </p>	
+
 }
 
 }
